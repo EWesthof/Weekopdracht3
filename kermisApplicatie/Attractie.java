@@ -2,9 +2,9 @@ package kermisApplicatie;
 
 class Attractie {
 	String naam;
-	static double prijs;
+	double prijs;
 	int oppervlakte;
-	int omzetAttractie;
+	double omzetAttractie;
 	int kaartjes;
 	
 	void draaien(Attractie attractie){
@@ -12,7 +12,7 @@ class Attractie {
 	}
 	
 	void omzetUpdaten(Attractie attractie) {
-		attractie.omzetAttractie += Attractie.prijs;
+		attractie.omzetAttractie += attractie.prijs;
 	}
 	
 	void getOmzetAttractie(Attractie attractie) {

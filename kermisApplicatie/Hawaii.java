@@ -1,9 +1,15 @@
 package kermisApplicatie;
 
-class Hawaii extends Attractie {
+class Hawaii extends RisicoRijkeAttracties {
 	Hawaii(){
-		naam = "Hawaii";
-		prijs = 2.90;
-		oppervlakte = 7;
+		this.naam = "Hawaii";
+		this.prijs = 2.90;
+		this.oppervlakte = 7;
+	}
+
+	@Override
+	void opstellingsKeuring() {
+		System.out.println("De attractie " + this.naam + " is weer goedgekeurd!");
+		
 	}
 }

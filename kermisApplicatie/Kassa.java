@@ -4,8 +4,11 @@ class Kassa {
 private double omzetKermis;
 private int kaartjes;
 
-public double omzetBijwerken(Attractie acttractie) {
-	omzetKermis += Attractie.prijs;
+public double omzetBijwerken(Attractie attractie) {
+	omzetKermis += attractie.prijs;
+	return omzetKermis;
+}
+public double omzetTeruggeven() {
 	return omzetKermis;
 }
 public void omzetTonen() {
