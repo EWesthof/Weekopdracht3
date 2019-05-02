@@ -7,7 +7,7 @@ class Attractie {
 	double omzetAttractie;
 	int kaartjes;
 	
-	void draaien(Attractie attractie){
+	void draaien(Attractie attractie) throws Exception{
 		System.out.println("Je zit nu in de " + attractie.naam);
 	}
 	
