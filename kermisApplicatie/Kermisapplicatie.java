@@ -6,16 +6,14 @@ import java.util.Scanner;
 
 class Kermisapplicatie {
 	ArrayList<Attractie> attracties = new ArrayList<>();
-	static Spin spinnetje = new Spin();
-	static LadderKlimmen laddertje = new LadderKlimmen();
 
 	Kermisapplicatie() {
 		attracties.add(new BotsAuto());
-		attracties.add(spinnetje);
+		attracties.add(new Spin());
 		attracties.add(new SpiegelPaleis());
 		attracties.add(new Spookhuis());
 		attracties.add(new Hawaii());
-		attracties.add(laddertje);
+		attracties.add(new LadderKlimmen());
 	}
 	static boolean nieuweAttractie = true;
 	public static void main(String[] args) {
@@ -27,7 +25,7 @@ class Kermisapplicatie {
 		System.out.println("Welkom op de kermis!");
 		int attractiesgedraaid = 0;
 		while (nieuweAttractie) {
-			if (attractiesgedraaid != belastingGeind) {
+			if (attractiesgedraaid != 2) {
 				kassa.kaartVerkocht();
 				Attractie actief = DeventerKermis.attracties.get(blijKind.AttractieKiezen() -1);
 				actief.kaartjes +=1;
@@ -45,7 +43,7 @@ class Kermisapplicatie {
 			}
 			else {
 				BelastingInspecteur Geldwolf = new BelastingInspecteur();
-				kassa.omzetKermis -= Geldwolf.TotaleBelastingInnen(spinnetje, laddertje);
+				kassa.omzetKermis -= Geldwolf.AlleBelasting(DeventerKermis);
 				attractiesgedraaid = 0;
 				belastingGeind = belastingInner.nextInt(15);
 			}

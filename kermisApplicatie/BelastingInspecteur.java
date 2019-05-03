@@ -8,11 +8,16 @@ public class BelastingInspecteur {
 		return belasting;
 	}
 	
-	double TotaleBelastingInnen(Spin spin, LadderKlimmen ladderklimmen) {
+	
+	double AlleBelasting(Kermisapplicatie kermis) {
 		System.out.println("De Geldwolf is gearriveerd, er moet belasting betaald worden");
-		double totaleBelasting = this.BelastingInnen(spin) + this.BelastingInnen(ladderklimmen);
+		double totaleBelasting = 0.0;
+		for (Attractie attractie : kermis.attracties) {
+			if (attractie instanceof GokAttractie) {
+				totaleBelasting += this.BelastingInnen((GokAttractie)attractie);
+			}
+		}
 		return totaleBelasting;
-		
 	}
 	
 }
