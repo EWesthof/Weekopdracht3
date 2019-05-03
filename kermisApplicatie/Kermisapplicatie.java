@@ -27,7 +27,7 @@ class Kermisapplicatie {
 		System.out.println("Welkom op de kermis!");
 		int attractiesgedraaid = 0;
 		while (nieuweAttractie) {
-			if (attractiesgedraaid != 2) {
+			if (attractiesgedraaid != belastingGeind) {
 				blijKind.bezoeken(DeventerKermis, kassa);
 				attractiesgedraaid += 1;
 			}

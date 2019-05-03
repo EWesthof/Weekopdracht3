@@ -9,7 +9,7 @@ public class BelastingInspecteur {
 	}
 	
 	double TotaleBelastingInnen(Spin spin, LadderKlimmen ladderklimmen) {
-		System.out.println("Er moet belasting betaald worden");
+		System.out.println("De Geldwolf is gearriveerd, er moet belasting betaald worden");
 		double totaleBelasting = this.BelastingInnen(spin) + this.BelastingInnen(ladderklimmen);
 		return totaleBelasting;
 		
