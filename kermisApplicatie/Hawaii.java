@@ -2,7 +2,7 @@ package kermisApplicatie;
 
 class Hawaii extends RisicoRijkeAttracties {
 	Hawaii(){
-		this.naam = "Hawaii";
+		this.naam = "Tropical Hawaii";
 		this.prijs = 2.90;
 		this.oppervlakte = 7;
 	}

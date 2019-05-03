@@ -2,7 +2,7 @@ package kermisApplicatie;
 
 class Spin extends RisicoRijkeAttracties implements GokAttractie {
 	Spin(){
-		this.naam = "Spin";
+		this.naam = "Spinnetje";
 		this.prijs = 2.25;
 		this.oppervlakte = 10;
 		this.omzetAttractie = 0;
@@ -27,9 +27,20 @@ class Spin extends RisicoRijkeAttracties implements GokAttractie {
 		
 	}
 
-	@Override
-	public double kansSpelBelastingBetalen() {
-			double belasting = this.omzetAttractie * 0.3;
-			return belasting;
-		}
+	double omzetTotInspectie = 0;
+ @Override
+ void omzetUpdaten(Attractie attractie) {
+		attractie.omzetAttractie += attractie.prijs;
+		this.omzetTotInspectie += attractie.prijs;
 	}
+	
+
+	public double kansSpelBelastingBetalen() {
+		double belasting = this.omzetTotInspectie * 0.3;
+		this.omzetAttractie -= belasting;
+		omzetTotInspectie = 0;
+		return belasting;
+	}
+}
+
+	
