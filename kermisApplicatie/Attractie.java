@@ -8,7 +8,7 @@ class Attractie {
 	int kaartjes;
 	
 	void draaien() throws Exception{
-		System.out.println("Je zit nu in de " + this.naam);
+		System.out.println("Je zit nu in: " + this.naam);
 	}
 	
 	void omzetUpdaten () {

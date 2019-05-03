@@ -13,7 +13,7 @@ class Spin extends RisicoRijkeAttracties implements GokAttractie {
 	@Override
 	void draaien() throws Exception{
 		if (this.kaartjes %5 != 0) {
-		System.out.println("Je zit nu in de " + this.naam);
+		System.out.println("Je zit nu in: " + this.naam);
 		}
 		else {
 			throw new Exception("Je moet een onderhoudsbeurt");

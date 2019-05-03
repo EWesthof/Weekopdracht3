@@ -40,7 +40,7 @@ void alleOmzetOfKaartjes(Kermisapplicatie kermisapplicatie) {
 	else if (keuze.equals("k")) {
 		this.kaartenVerkoop();
 		for (Attractie attractie: kermisapplicatie.attracties) {
-			System.out.println("Voor de " + attractie.naam + " zijn " + attractie.kaartjes + " kaartjes verkocht");
+			System.out.println("Voor " + attractie.naam + " zijn " + attractie.kaartjes + " kaartjes verkocht");
 		}
 	}
 		}

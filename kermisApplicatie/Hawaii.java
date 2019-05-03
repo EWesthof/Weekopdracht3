@@ -14,9 +14,9 @@ class Hawaii extends RisicoRijkeAttracties {
 	}
 	
 	@Override
-	void draaien(Attractie attractie) throws Exception{
+	void draaien() throws Exception{
 		if (this.kaartjes % 10 != 0) {
-		System.out.println("Je zit nu in de " + attractie.naam);
+		System.out.println("Je zit nu in: " + this.naam);
 		}
 		else {
 			throw new Exception("Je moet een onderhoudsbeurt");
