@@ -7,12 +7,12 @@ class Attractie {
 	double omzetAttractie;
 	int kaartjes;
 	
-	void draaien(Attractie attractie) throws Exception{
-		System.out.println("Je zit nu in de " + attractie.naam);
+	void draaien() throws Exception{
+		System.out.println("Je zit nu in de " + this.naam);
 	}
 	
-	void omzetUpdaten(Attractie attractie) {
-		attractie.omzetAttractie += attractie.prijs;
+	void omzetUpdaten () {
+		this.omzetAttractie += this.prijs;
 	}
 	
 	void getOmzetAttractie(Attractie attractie) {

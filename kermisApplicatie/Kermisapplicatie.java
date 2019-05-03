@@ -28,15 +28,28 @@ class Kermisapplicatie {
 		int attractiesgedraaid = 0;
 		while (nieuweAttractie) {
 			if (attractiesgedraaid != belastingGeind) {
-				blijKind.bezoeken(DeventerKermis, kassa);
+				kassa.kaartVerkocht();
+				Attractie actief = DeventerKermis.attracties.get(blijKind.AttractieKiezen() -1);
+				actief.kaartjes +=1;
+				try {
+				actief.draaien();
+				}
+				catch(Exception e) {
+				OnderhoudsMonteur HandigeHarry = new OnderhoudsMonteur();
+				HandigeHarry.onderhouden((RisicoRijkeAttracties)actief);
+				}
+				kassa.omzetBijwerken(actief);
+				actief.omzetUpdaten();
 				attractiesgedraaid += 1;
+				blijKind.NogEenAttractie(DeventerKermis);
 			}
 			else {
 				BelastingInspecteur Geldwolf = new BelastingInspecteur();
 				kassa.omzetKermis -= Geldwolf.TotaleBelastingInnen(spinnetje, laddertje);
 				attractiesgedraaid = 0;
+				belastingGeind = belastingInner.nextInt(15);
 			}
 	}
-		kassa.alleOmzet(DeventerKermis);
+		kassa.alleOmzetOfKaartjes(DeventerKermis);
 }
 }

@@ -14,7 +14,6 @@ public double omzetBijwerken(Attractie attractie) {
 public double omzetTeruggeven() {
 	return omzetKermis;
 }
-
 	
 public void omzetTonen() {
 	System.out.println("De gehele omzet van de kermis is €" + omzetKermis);
@@ -28,7 +27,7 @@ public void kaartenVerkoop() {
 	System.out.println("Er zijn in totaal " + kaartjes + " kaartjes verkocht");
 }
 
-void alleOmzet(Kermisapplicatie kermisapplicatie) {
+void alleOmzetOfKaartjes(Kermisapplicatie kermisapplicatie) {
 	System.out.println("Wilt u de omzet of het aantal kaartjes? Voer o in voor omzet, k voor kaartjes");
 	Scanner aanDeKassa = new Scanner(System.in);
 	String keuze = aanDeKassa.nextLine();

@@ -10,9 +10,9 @@ class LadderKlimmen extends Attractie implements GokAttractie {
 	
 	double omzetTotInspectie = 0;
  @Override
- void omzetUpdaten(Attractie attractie) {
-		attractie.omzetAttractie += attractie.prijs;
-		this.omzetTotInspectie += attractie.prijs;
+ void omzetUpdaten() {
+		this.omzetAttractie += this.prijs;
+		this.omzetTotInspectie += this.prijs;
 	}
 	
 
