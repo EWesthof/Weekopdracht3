@@ -25,7 +25,7 @@ class Kermisapplicatie {
 		System.out.println("Welkom op de kermis!");
 		int attractiesgedraaid = 0;
 		while (nieuweAttractie) {
-			if (attractiesgedraaid != 2) {
+			if (attractiesgedraaid != belastingGeind) {
 				kassa.kaartVerkocht();
 				Attractie actief = DeventerKermis.attracties.get(blijKind.AttractieKiezen() -1);
 				actief.kaartjes +=1;
