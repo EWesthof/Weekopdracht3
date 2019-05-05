@@ -1,8 +1,10 @@
 package kermisApplicatie;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 class Kassa {
+DecimalFormat decimaleOmzet = new DecimalFormat("#.##");
 double omzetKermis;
 private int kaartjes;
 
@@ -16,7 +18,7 @@ public double omzetTeruggeven() {
 }
 	
 public void omzetTonen() {
-	System.out.println("De gehele omzet van de kermis is €" + omzetKermis);
+	System.out.println("De gehele omzet van de kermis is €" + decimaleOmzet.format(omzetKermis));
 }
 
 public void kaartVerkocht() {
